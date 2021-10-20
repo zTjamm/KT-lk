@@ -1,0 +1,81 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+	<head>
+		<!-- Заголовок страницы в браузере -->
+		<title>Личный кабинет</title>
+		<!-- Подключаем CSS -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/main.css">
+		
+		<!-- Кодировка страницы -->
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	</head>
+	<!-- Отображаемое тело страницы -->
+	<body>
+
+		
+		<header class="header">			
+				<div class="header__menu">					
+						<ul class="header__nav--list">
+							<li class="header__nav--item"><a class="header__nav--link header__nav--link-active" href="#">Статус</a></li>
+							<li class="header__nav--item"><a class="header__nav--link" href="#">Абонент</a></li>
+							<li class="header__nav--item"><a class="header__nav--link" href="#">Интернет</a></li>
+							<li class="header__nav--item"><a class="header__nav--link" href="#">Телевидение</a></li>
+							<li class="header__nav--item"><a class="header__nav--link" href="#">Финансы</a></li>	
+						</ul>
+						<ul class="header__nav--list">
+							<li class="header__nav--item header__nav--ritem"><a class="header__nav--link" href="/?action=logout">Выход</a></li>
+						</ul>								
+				</div>			
+		</header>
+		<main class="main container">
+			<h2 class="main__name">Информация о пользователе</h2>			
+			<table class="main__wrapper">
+				<tr class="main__menu">
+					<th class="menu__items">Баланс</th>
+					<th class="menu__items">{$User.user.deposit}</th>
+				</tr>
+				<tr class="main__menu">
+					<th class="menu__items">Взять кредит</th>
+					<th class="menu__items">{$User.user.credit}</th>
+				</tr>
+				<tr class="main__menu">
+					<th class="menu__items">ФИО</th>
+					<th class="menu__items">{$User.user.fio}</th>
+				</tr>
+				<tr class="main__menu">
+					<th class="menu__items">Адрес</th>
+					<th class="menu__items">{$User.user.address_street}</th>
+				</tr>
+				<tr class="main__menu">
+					<th class="menu__items">Логин</th>
+					<th class="menu__items">{$User.user.login}</th>
+				</tr>
+				<tr class="main__menu">
+					<th class="menu__items">Пароль</th>
+					<th class="menu__items">{$User.user.password}</th>
+				</tr>				
+				<tr class="main__menu">
+					<th class="menu__items">IP адрес</th>
+					<th class="menu__items">{$User.inet.ipaddress}</th>
+				</tr>
+				<tr class="main__menu">
+					<th class="menu__items">Договор</th>
+					<th class="menu__items">{$User.user.contract_id}</th>
+				</tr>
+				<tr class="main__menu">
+					<th class="menu__items">Статус</th>
+					<th class="menu__items">{$User.inet.status}</th>
+				</tr>
+			</table>
+		</main>
+	</body>
+</html>

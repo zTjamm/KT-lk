@@ -1,0 +1,66 @@
+Панель навигации
+
+Шаблон main.tpl
+Шаблон person.tpl
+Шаблон inet.tpl
+Шаблон iptv.tpl
+Ну и так далее, скоро можно будет самому определять название шаблона через переменную action
+Выход
+Шаблон main.tpl
+Mikl here
+Variable: $User
+$User.user.uid = "1326"
+$User.user.gid = "3"
+$User.user.id = "1325"
+$User.user.activate = "0000-00-00"
+$User.user.expire = "0000-00-00"
+$User.user.credit = "1.00"
+$User.user.reduction = "0.00"
+$User.user.reduction_date = "0000-00-00"
+$User.user.registration = "2012-11-04"
+$User.user.password = "[=@S�Z"
+$User.user.disable = "0"
+$User.user.company_id = "0"
+$User.user.bill_id = "1325"
+$User.user.ext_bill_id = "0"
+$User.user.credit_date = "0000-00-00"
+$User.user.domain_id = "0"
+$User.user.deleted = "0"
+$User.user.fio = "Курков Михаил Игоревич"
+$User.user.phone = "0"
+$User.user.email = ""
+$User.user.country_id = "0"
+$User.user.address_street = "Связистов"
+$User.user.address_build = "12"
+$User.user.address_flat = "300"
+$User.user.comments = "5/13 Курков Домашний http://10.150.10.175:1080/ admin21"
+$User.user.contract_id = "21"
+$User.user.contract_date = "2012-11-04"
+$User.user.contract_sufix = ""
+$User.user.pasport_num = "4606 879232"
+$User.user.pasport_date = "2006-10-05"
+$User.user.pasport_grant = "ГОКВД г. Краснознаменска"
+$User.user.zip = ""
+$User.user.city = ""
+$User.user.accept_rules = "0"
+$User.user.location_id = "0"
+$User.user.name = "Сотрудники"
+$User.user.descr = ""
+$User.user.separate_docs = "0"
+$User.user.allow_credit = "0"
+$User.user.disable_paysys = "0"
+$User.user.disable_chg_tp = "0"
+$User.user.deposit = "0.00"
+$User.user.login = "jm"
+
+Variable: $User.inet
+$User.inet.uid = "1326"
+$User.inet.ipaddress = "10.151.4.8"
+$User.inet.tarif = "Сотрудник"
+$User.inet.cid = ""
+$User.inet.started = ""
+$User.inet.status = ""
+$User.inet.acct_session_time = ""
+$User.inet.acct_input_octets = ""
+$User.inet.acct_output_octets = ""
+$User.inet.nas_id = ""

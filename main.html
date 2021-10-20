@@ -1,0 +1,47 @@
+{include file='header.tpl'}
+
+<body>
+    {include file='navbar.tpl'}
+    
+
+    <div class="b-example-divider"></div>
+
+    <main>
+        <div class="container-lg">
+            <div class="row g-2 p-2">
+                {if !empty($Error)}
+                {foreach $Error as $MsgError}
+                <div class="alert alert-danger alert-dismissible fade show">
+                    {$MsgError}
+                </div>
+                {/foreach}
+                {/if}
+                <div class="col-3 text-end">ФИО</div>
+                <div class="col-9 bg-light">{$User.user.fio}</div>
+                <div class="col-3 text-end">Телефон</div>
+                <div class="col-9 bg-light">{$User.user.phone}</div>
+                <div class="col-3 text-end">Логин</div>
+                <div class="col-9 bg-light">{$User.user.login}</div>
+                <div class="col-3 text-end">Баланс</div>
+                <div class="col-9 bg-light">{$User.user.deposit}</div>
+                <div class="col-3 text-end">Кредит</div>
+                <div class="col-9 bg-light">{$User.user.credit}</div>
+                <div class="col-3 text-end">Действует до</div>
+                <div class="col-9 bg-light">{$User.user.credit_date}</div>
+                <div class="col-3 text-end">Скидка</div>
+                <div class="col-9 bg-light">{$User.user.reduction|string_format:"%d"} %</div>
+                <div class="col-3 text-end">Действует до</div>
+                <div class="col-9 bg-light">{$User.user.reduction_date}</div>
+                <div class="col-3 text-end">Сессия с</div>
+                <div class="col-9 bg-light">{if isset($User.inet.nas_id)}{$User.inet.started}{else}Нет сессии{/if}</div>
+                <div class="col-3 text-end">Сервер</div>
+                <div class="col-9 bg-light">{if isset($User.inet.nas_id)}Сервер доступа {$User.inet.nas_id}{else}Нет
+                    сессии{/if}</div>
+                <div class="col-3 text-end">IP-адрес</div>
+                <div class="col-9 bg-light">{$User.inet.ipaddress}</div>
+            </div>
+        </div>
+
+    </main>
+
+    {include file='footer.tpl'}
